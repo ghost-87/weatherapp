@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    print('11111111111111');
     cityListHandler(addCityList);
     super.initState();
   }
@@ -60,9 +59,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   weatherHandle(apple) {
-    print('apple');
-    print(apple);
-    var temp2 = apple;
+    var temp2 =apple.toSet().toList();
+    
     for (int i = 0; i < temp2.length; i++) {
       var temp = BlocProvider(
         create: (context) =>
